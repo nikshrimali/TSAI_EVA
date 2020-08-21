@@ -111,7 +111,7 @@ Not able to cross earlier metrices
 * Removed all the 2 strides
 - Removed last layer of 1*1
 - Replaced with 3*3
-Increase in parameters
+Increase in parameter
 Results
 
 - No of parameters - 7586
