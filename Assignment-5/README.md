@@ -1,4 +1,9 @@
 # Assignment-5
+ Submitted by - Team Evangers
+ - Nikhil Shrimali 
+ - Aishwariya Anand 
+ - Balaji B 
+ - Manivel Sethu
 
 ## Target  
 
@@ -13,11 +18,21 @@
 - Keep Receptive field calculations handy for each of your models.
 - If your GitHub folder structure or file_names are messy, -100.
 
-## Results  
+## Our Submission
 
--
--
--
+ The target is acheived in 4 Steps, each steps has involved sevral experiments. 
+ 
+  Each step has its own README file, I have tried to explain all these results of experiments with my analysis, experimentation and results in the individual README file in an intutive way.
 
-## Analysis
+Codes that didn't make it to final step can be found in Martyrs directory. (RIP!!!)
+
+## Final Results
+
+- No of parameters - 7076
+- No of epochs - 15
+- Dropout - *3%
+- Starting training accuracy - 87.51
+- Starting testing accuracy - 98.24
+- Max training accuracy - 99.04%
+- Max testing accuracy - 99.52%
 
