@@ -12,8 +12,8 @@ class GetTransforms():
 
     def trainparams(self):
         train_transformations = [
-            transforms.RandomRotation((-14.0, 14.0), fill=(1,)),
-            transforms.ColorJitter(brightness=0.10, contrast=0.1, saturation=0.10, hue=0.1),
+            transforms.RandomRotation((-7.0, 7.0), fill=(1,)),
+            # transforms.ColorJitter(brightness=0.10, contrast=0.1, saturation=0.10, hue=0.1),
             transforms.ToTensor(),
             transforms.Normalize((0.1307,),(0.3081,))
             ]

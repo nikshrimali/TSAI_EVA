@@ -29,7 +29,82 @@ Here are some of the questions for S6-Assignment-Solution:
 
 ## Our Submission
 
+We have trained 5 models, details are as below
 
 
-## Final Results
+  - gbn - Model with Ghost Batch Norm(GBN)
+  - l1_l2_gbn - Model with L1, L2 and GBN
+  - 'l1_bn - Model with only L1 Regularization
+  - l2_bn - Model with only L2 Regularization
+  - l1_l2_bn - Model with both L1 and L2 Regularization
+
+
+## The Ghost BatchNorm
+
+It is proven to improve the performance of the existing models by some points, as the batch gets further divided into smaller batches and hence known to provide a regularizing effect the the model
+
+We have tried the model with no of splits = (4, 8, 16) and batch size used for this is 256 instead of 128.
+
+### No of Splits - 16
+
+#### Results
+
+- No of parameters - 7076
+- No of epochs - 15
+- Dropout - *3%
+- Starting training accuracy - 78.40
+- Starting testing accuracy - 97.28
+- Max training accuracy - 98.36%
+- Max testing accuracy - 99.22%
+
+#### Obervations
+
+The model is not able to achive the accuracy of our last model which was < 99.5%
+
+GBN is known to have a regularization effect on the 
+
+### No of Splits - 8 and Variable Learning Rate
+
+> GBN can also have a regularizing effect
+
+#### Results
+
+- No of parameters - 7076
+- No of epochs - 15
+- Dropout - *3%
+- Starting training accuracy - 80.56
+- Starting testing accuracy - 97.93
+- Max training accuracy - 98.53%
+- Max testing accuracy - 99.39%
+
+#### Obervations
+
+- Increase in training and the testing (~.5%) accuracy 
+The model is not able to achive the accuracy of our last model which was < 99.5%
+- Training accuracy is continuously increasing, but the effect is not visible on the testing accuracy, this could be the case that we are regularizing too  much, since GBN can also have a regularizing effect.
+
+- Model might be underfitting
+
+- Also many ups and downs in the testing curves, the learning rate seems to be too high
+
+### No of Splits - 4 and Less Image Augmentation
+
+> When we add a new regularizer, to balance it off, we should also decrease the old ones, otherwise this could change the loss curve. Only small changes are required at a time.
+
+#### Results
+
+- No of parameters - 7076
+- No of epochs - 15
+- Dropout - *3%
+- Starting training accuracy - 83.12
+- Starting testing accuracy - 97.79
+- Max training accuracy - 98.93%
+- Max testing accuracy - 99.43%
+
+#### Obervations
+
+- Increase in starting training and decrease testing in (~.5%) accuracy 
+
+- The max training and testing accuracy has not much changes, but testing accuracy curve is consistent in the final epochs, hence this looks like an improvement over the previous models
+
 

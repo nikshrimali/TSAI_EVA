@@ -1,7 +1,12 @@
 # Code that gets the images that are misclassified by our model and convert it into a single figure
 
-import numpy as np 
+import numpy as np
 import matplotlib.pyplot as plt
+import os
+
+os.chdir('d:\Python Projects\EVA')
+cwd = os.getcwd()
+img_dir = os.path.join(cwd, 'Assignment-6/saved_images')
 
 def plot_misclassified(misclassified:list):    
     plt.figure(figsize=(20,20))
@@ -9,5 +14,5 @@ def plot_misclassified(misclassified:list):
         plt.subplot(5, 5, plotIndex + 1,)
         plt.axis('off')
         plt.imshow(np.reshape(misclassified[plotIndex][0].cpu(), (28,28)), cmap=plt.cm.gray)
-        plt.title("Predicted: {}, Actual: {}".format(misclassified[plotIndex][1], misclassified[plotIndex][2].cpu().numpy(), fontsize = 10))
-        plt.savefig('misclassified.jpeg')
+        plt.title("Predicted: {}, Actual: {}".format(misclassified[plotIndex][1], misclassified[plotIndex][2].cpu().numpy(), fontsize = 20))
+        plt.savefig(os.path.join(img_dir,'misclassified.png'))

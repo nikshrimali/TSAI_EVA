@@ -7,7 +7,7 @@ import os
 os.chdir('d:\Python Projects\EVA')
 cwd = os.getcwd()
 
-model_dir = os.path.join(cwd, 'Assignment-6/saved_models')
+model_dir = os.path.join(cwd, 'Assignment-6/saved_models/model.pth')
 
 def model_training(model, device, train_dataloader, optimizer, train_acc, train_losses, l1_loss=False):
             
@@ -40,3 +40,4 @@ def model_training(model, device, train_dataloader, optimizer, train_acc, train_
 
         pbar.set_description(desc=f'Loss={loss.item()} Batch_id={batch_idx} Accuracy={100*correct/processed:0.2f}')
         train_acc.append(100*correct/processed)
+        torch.save(model.state_dict(), model_dir)
