@@ -2,11 +2,15 @@ from tqdm import tqdm
 from torch import nn
 import torch.nn
 from torch.functional import F
+import os
 
-train_losses = []
-train_acc = []
+os.chdir('d:\Python Projects\EVA')
+cwd = os.getcwd()
 
-def train(model, device, train_dataloader, optimizer, epochs):
+model_dir = os.path.join(cwd, 'Assignment-6/saved_models')
+
+def model_training(model, device, train_dataloader, optimizer, train_acc, train_losses, l1_loss=False):
+            
     model.train()
     pbar = tqdm(train_dataloader)
     correct = 0
@@ -17,6 +21,15 @@ def train(model, device, train_dataloader, optimizer, epochs):
         optimizer.zero_grad()
         y_pred = model(data)
         loss = F.nll_loss(y_pred, target)
+
+        # IF L1 Loss
+        if l1_loss:
+            lambda_l1 = 0.0001
+            l1 = 0
+            for p in model.parameters():
+                l1 = l1 + p.abs().sum()
+                loss = loss + lambda_l1*l1
+        
         train_losses.append(loss)
         loss.backward()
         optimizer.step()

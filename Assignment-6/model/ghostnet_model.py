@@ -1,4 +1,4 @@
-from ghost_batchnorm import *
+from data_process.ghost_batchnorm import *
 from torch import nn
 from torch.functional import F
 

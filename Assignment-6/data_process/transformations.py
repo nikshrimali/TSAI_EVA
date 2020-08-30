@@ -10,19 +10,19 @@ class GetTransforms():
     def __init__(self):
         pass
 
-    def train(self):
+    def trainparams(self):
         train_transformations = [
-        transforms.RandomRotation((-14.0, 14.0), fill=(1,)),
-        transforms.ColorJitter(brightness=0.10, contrast=0.1, saturation=0.10, hue=0.1),
-        transforms.ToTensor(),
-        transforms.Normalize((0.1307,),(0.3081,))]
+            transforms.RandomRotation((-14.0, 14.0), fill=(1,)),
+            transforms.ColorJitter(brightness=0.10, contrast=0.1, saturation=0.10, hue=0.1),
+            transforms.ToTensor(),
+            transforms.Normalize((0.1307,),(0.3081,))
+            ]
 
         return train_transformations
 
-    def test(self):
+    def testparams(self):
         test_transforms = [
             transforms.ToTensor(),
             transforms.Normalize((0.1307,),(0.3081,))
         ]
-
         return test_transforms
