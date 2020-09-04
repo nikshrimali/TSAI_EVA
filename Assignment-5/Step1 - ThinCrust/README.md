@@ -43,7 +43,7 @@ In our previous model, the pizza has a thick crust (6 Mill params!!! :o), but it
 
 - The model is showing reluctance to cross the 99.83% mark even after increasing the epochs by 15, this shows even pushing model harder wont get us to 99.4 testing.
 
-- Post each epoch the model is gaining some training accuracy, but no change in the test accuracy
+- Post each epoch the model is gaining some training accuracy, but no change in the test accuracy. These are clear signs of Overfitting!!!
 
 - The testing accuarcy graph looks more like my career graph. We need to smoothing it out. Both of them!!!!
 

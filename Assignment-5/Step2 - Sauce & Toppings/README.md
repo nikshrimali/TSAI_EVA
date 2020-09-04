@@ -52,6 +52,8 @@ After thinning our base, we need to add some toppings to make our meal delicious
 
 - Post each epoch the model is gaining some training accuracy, but no change in the test accuracy, hence even decrasing the params will work
 
+- This model is still overfitting. As training accuracy touches 100%, there can be no more improvements expected with this model in the testing accuracy.
+
 ***************************************************************************
 
 # Exp 2 - More Thinning of model
@@ -73,13 +75,14 @@ Time to be realistic
 
 - We reigned the wild stallion reduced params to a total of 7876
 
-- There is a significant gap remains in training accuracy and test accuracy, but the difference is decreasing.
+- There is a significant gap remains in training accuracy and test accuracy, but the difference is decreasing. The model seems to be overfitting still
 
 - The model surprised by  getting 99.24 test accuracy in just 5th epoch, only to disappoint in later epochs. Model seems to be overshooting the minima
 
 - Test accuracy still sees large values of ups and downs.
 
 - Performance is like a pendulam, need to decrease the difference by adding some regularization
+
 
 ## Future enhancements
 
@@ -110,6 +113,8 @@ Less difference between training and testing accuracy..
 - Better accuracy than the last mode (Increased by .04%)
 
 - Logs are beautiful as the training and testing accuracy are doing PDA with each other.( Awwww!!!!!)
+
+- Overfitting problem seems to be resolved.
 
 - Model can be pushed further since training accuracy is 99.33
 
