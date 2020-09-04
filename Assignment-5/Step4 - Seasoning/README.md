@@ -62,7 +62,7 @@ I know, I am getting greedy, just wanted to do some experiments with Dropout, we
 ### Analysis
 
 > Model's Accuracy 
-![Models Accuracy](./saved_images/accuracy.png)
+![Models Accuracy](./saved_images/accuracy.PNG)
 - We have outsmarted ourselves!!, reducing the dropout to 3%, improved out model's testing accuracy to 99.55% up from 99.49%.
 
 - Adding too much regularization can alter the loss curve, as we add new regularizations, we should also balance off the old ones.
