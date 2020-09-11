@@ -3,14 +3,14 @@ import os
 from torch.functional import F
 
 
-os.chdir('d:\Python Projects\EVA')
+# os.chdir('d:\Python Projects\EVA')
 cwd = os.getcwd()
-model_dir = os.path.join(cwd, 'Assignment-6/saved_models/model.pth')
+# model_dir = os.path.join(cwd, 'Assignment-6/saved_models/model.pth')
 
 
 def model_testing(model, device, test_dataloader, test_acc, test_losses, misclassified = []):
     
-    model.load_state_dict(torch.load(model_dir)) # Loading the saved model
+    # model.load_state_dict(torch.load(model_dir)) # Loading the saved model
     model.eval()
     test_loss = 0
     correct = 0

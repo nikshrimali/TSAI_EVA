@@ -4,10 +4,10 @@ import torch.nn
 from torch.functional import F
 import os
 
-os.chdir('d:\Python Projects\EVA')
-cwd = os.getcwd()
+# os.chdir('d:\Python Projects\EVA')
+# cwd = os.getcwd()
 
-model_dir = os.path.join(cwd, 'Assignment-6/saved_models/model.pth')
+# model_dir = os.path.join(cwd, 'Assignment-6/saved_models/model.pth')
 
 def model_training(model, device, train_dataloader, optimizer, train_acc, train_losses, l1_loss=False):
             
@@ -15,6 +15,7 @@ def model_training(model, device, train_dataloader, optimizer, train_acc, train_
     pbar = tqdm(train_dataloader)
     correct = 0
     processed = 0
+    running_loss = 0.0
 
     for batch_idx, (data, target) in enumerate(pbar):
         data, target = data.to(device), target.to(device)
@@ -30,6 +31,8 @@ def model_training(model, device, train_dataloader, optimizer, train_acc, train_
                 l1 = l1 + p.abs().sum()
                 loss = loss + lambda_l1*l1
         
+        
+
         train_losses.append(loss)
         loss.backward()
         optimizer.step()
@@ -37,7 +40,12 @@ def model_training(model, device, train_dataloader, optimizer, train_acc, train_
         pred = y_pred.argmax(dim=1, keepdim=True)
         correct += pred.eq(target.view_as(pred)).sum().item()
         processed += len(data)
-
+        # print statistics
+        running_loss += loss.item()
+        # if batch_idx % 500 == 499:    # print every 2000 mini-batches
+        #     # print('[%d, %5d] loss: %.3f' %
+        #     #       (epoch + 1, i + 1, running_loss / 2000))
         pbar.set_description(desc=f'Loss={loss.item()} Batch_id={batch_idx} Accuracy={100*correct/processed:0.2f}')
+        # running_loss = 0.0
         train_acc.append(100*correct/processed)
-        torch.save(model.state_dict(), model_dir)
+        # torch.save(model.state_dict(), model_dir)

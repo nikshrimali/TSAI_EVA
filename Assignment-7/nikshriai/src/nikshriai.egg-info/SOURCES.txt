@@ -1,6 +1,0 @@
-setup.py
-src/model.py
-src/nikshriai.egg-info/PKG-INFO
-src/nikshriai.egg-info/SOURCES.txt
-src/nikshriai.egg-info/dependency_links.txt
-src/nikshriai.egg-info/top_level.txt
