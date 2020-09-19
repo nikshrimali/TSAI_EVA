@@ -52,6 +52,6 @@ The code is completely modularized and shrinkai is used where the source code ex
 
 - Need to add image augmentations to have a regularizing effect on the dataset
 
-## Performance Metrics for all models
+## Receptive Field Calculations
 
 ![Receptive Field Calculations](./saved_images/rcptvefld.PNG)
