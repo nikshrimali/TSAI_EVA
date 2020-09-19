@@ -41,10 +41,10 @@ The code is completely modularized and shrinkai is used where the source code ex
 # About RESNET18
 
 - Resnet18 comes from the family of amazing architectures which is known as RESIDUAL Networks. The core idea of ResNet is introducing a so-called “identity shortcut connection” that skips one or more layers.A residual block is displayed as the following:
-![Resnet18 Arch](./assets/resnet_arch.PNG)
+![Resnet18 Arch](./assets/resnet_arch.png)
 
 - It has skip connections that allows it to have multiple receptive fields which makes it an amazing model and allows it idenfity object of every size
-![Residual Block](./assets/residual-block.PNG)
+![Residual Block](./assets/residual-block.png)
 
 - It has 1 convolution layer of 7x7 sized kernel (64), with a stride of 2
 - It is followed by MaxPooling. In fact, ResNet has only 1 MaxPooling operation!
