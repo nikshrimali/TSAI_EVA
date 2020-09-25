@@ -1,10 +1,7 @@
 # Assignment-6
 
- Submitted by - Team Evangers
+ Submitted by
  - Nikhil Shrimali
- - Aishwarya Anand
- - Balaji B
- - Manivel Sethu
 
 ## Target  
 
