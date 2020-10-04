@@ -24,7 +24,7 @@ To have some answers from the model, we can pass the layers to the models, in im
 
 As you can see in the initial layers, the model is detecting textures, patterns, gradients, and focus is more on the object on in the last layers. The model is slowly begining to analyse the objects in the last layers
 
-![GradCam](./assets/gradcam.PNG)
+![GradCam](./assets/gradcam.png)
 
 
 
