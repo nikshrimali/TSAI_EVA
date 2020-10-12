@@ -1,0 +1,76 @@
+name: AdvLR
+save_dir: saved/
+seed: 1
+target_device: 0
+
+model:
+    type: ResNet18
+    args: {}
+
+modelpath:
+    type: PathModel
+    args: savedmodel.h5    
+      
+
+train_data_loader:
+    type: TrainDataLoader
+    args:
+        batch_size: 512
+        num_workers: 0
+        shuffle: True
+
+test_data_loader:
+    type: TestDataLoader
+    args:
+        batch_size: 512
+        num_workers: 0
+        shuffle: False
+
+criterion: cross_entropy_loss
+
+lrmod:
+    type: ReduceLROnPlateau
+    args:
+        mode: 'min'
+        factor: 0.1
+        patience: 2
+        threshold: 0.001
+        threshold_mode: 'rel'
+        cooldown: 0
+        min_lr: 0
+        verbose: True
+    
+
+optimizer:
+    type: SGD
+    args:
+        lr: 0.001
+        momentum: 0.95
+        weight_decay: 0.0005
+
+lrmod:
+    type: OneCycleLR
+    args:
+        max_lr: 0.6
+        epochs: 24
+        pct_start: 0.3
+        anneal_strategy: 'cos'
+        cycle_momentum: True
+        base_momentum: 0.85
+        max_momentum: 0.95
+        div_factor: 10.0
+        final_div_factor: 100.0
+        last_epoch: -1
+        verbose: True
+
+range_test:
+    type: lr_finder
+    args:
+        start_lr: 0.00001
+        end_lr: 1
+        num_iter: 100
+        step_mode: 'linear'
+        
+
+training:
+    epochs: 24
