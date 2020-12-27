@@ -1,0 +1,11 @@
+D:/Python Projects/EVA/15_TheCapStone/models_all/YoloV3/data/customdata/data/images/z053 .jpg
+D:/Python Projects/EVA/15_TheCapStone/models_all/YoloV3/data/customdata/data/images/z054 .jpg
+D:/Python Projects/EVA/15_TheCapStone/models_all/YoloV3/data/customdata/data/images/z056 .jpg
+D:/Python Projects/EVA/15_TheCapStone/models_all/YoloV3/data/customdata/data/images/z057 .jpg
+D:/Python Projects/EVA/15_TheCapStone/models_all/YoloV3/data/customdata/data/images/z058 .jpg
+D:/Python Projects/EVA/15_TheCapStone/models_all/YoloV3/data/customdata/data/images/z059 .jpg
+D:/Python Projects/EVA/15_TheCapStone/models_all/YoloV3/data/customdata/data/images/z055 .jpg
+D:/Python Projects/EVA/15_TheCapStone/models_all/YoloV3/data/customdata/data/images/z060 .jpg
+D:/Python Projects/EVA/15_TheCapStone/models_all/YoloV3/data/customdata/data/images/z061 .jpg
+D:/Python Projects/EVA/15_TheCapStone/models_all/YoloV3/data/customdata/data/images/z062 .jpg
+D:/Python Projects/EVA/15_TheCapStone/models_all/YoloV3/data/customdata/data/images/z063 .jpg

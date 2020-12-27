@@ -1,0 +1,4 @@
+classes=4
+train=D:\Python Projects\EVA\15_TheCapStone\custom_data\train.txt
+valid=D:\Python Projects\EVA\15_TheCapStone\custom_data\test.txt
+names=D:\Python Projects\EVA\15_TheCapStone\custom_data\custom.names

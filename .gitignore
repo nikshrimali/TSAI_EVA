@@ -6,4 +6,18 @@ Assignment-5
 Assignment-6
 Assignment-7
 Assignment-8
+<<<<<<< HEAD
+<<<<<<< HEAD
 .scrap
+/15_TheCapStone/custom_data
+/15_TheCapStone/models_all\YoloV3\pretrained_model
+/15_TheCapStone/models_all\midas\model-f6b98070.pt
+/15_TheCapStone/ensemble.h5
+*.h5
+*.pt
+=======
+.scrap
+>>>>>>> parent of d0e634a... Updating Capstone
+=======
+.scrap
+>>>>>>> parent of 7b3104b... Updating Capstone
